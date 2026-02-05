@@ -2,8 +2,14 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+//Setting EJS as the view engine
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) =>{
-    res.send('Hello World!');
+    res.render('index', {
+        title: 'Home Page',
+        message: 'Hello from the Express Server!'
+    });
 });
 
 app.listen(port, () => {
