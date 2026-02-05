@@ -4,6 +4,7 @@ const port = 3000;
 
 //Setting EJS as the view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', (req, res) =>{
     res.render('index', {
